@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subinav S | Portfolio</title>
+<meta name="description" content="Portfolio of Subinav S, B.Sc. Data Science student in Coimbatore.">
+<style>
+:root{--bg:#fbfbf9;--surface:#fff;--ink:#16161a;--ink-2:#55555e;--ink-3:#8a8a93;--line:#e8e8e3;--accent:#3b3fd9;--accent-soft:#eef0ff;--max:1040px;
+--font:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--serif:Georgia,"Times New Roman",serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.65}
+a{color:inherit;text-decoration:none}ul{list-style:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 1.5rem}
+section{padding:6rem 0 0}
+.label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-family:ui-monospace,Menlo,monospace}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,2.8rem);line-height:1.1;margin:.5rem 0 2rem}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+header{position:sticky;top:0;z-index:10;background:rgba(251,251,249,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:600}.logo span{color:var(--accent)}
+.links{display:flex;gap:1.5rem;font-size:.9rem;color:var(--ink-2)}
+.links a{border-bottom:1px solid transparent;padding:.2rem 0}
+.links a:hover,.links a.active{color:var(--ink);border-color:var(--accent)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:.4rem .8rem;font:inherit;cursor:pointer}
+@media(max-width:720px){.menu-btn{display:block}
+.links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1.5rem}
+.links.open{display:flex}.links a{padding:.75rem 0}}
+/* Home */
+.hero{padding-top:clamp(4rem,12vw,7.5rem)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(3rem,10vw,6rem);line-height:1;margin:1rem 0 1.5rem}
+.hero h1 em{color:var(--accent)}
+.lead{max-width:600px;font-size:1.2rem;color:var(--ink-2)}
+.badges{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:2rem}
+.badge{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:.4rem .9rem;font-size:.85rem;color:var(--ink-2)}
+.badge b{color:var(--accent);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.btn{padding:.8rem 1.3rem;border-radius:999px;border:1px solid var(--ink);font-size:.92rem;font-weight:500;transition:.3s}
+.btn.primary{background:var(--ink);color:#fff}.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+/* About */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem}
+.about p{color:var(--ink-2);margin-bottom:1rem;max-width:60ch}
+.facts li{display:flex;justify-content:space-between;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.facts li span:first-child{color:var(--ink-3)}.facts li span:last-child{text-align:right}
+@media(max-width:800px){.about{grid-template-columns:1fr}}
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2rem}
+.skills h3{font-size:.95rem;padding-bottom:.5rem;margin-bottom:.5rem;border-bottom:1px solid var(--ink)}
+.skills li{padding:.3rem 0;color:var(--ink-2);font-size:.93rem}
+/* Projects */
+.projects{display:grid;gap:1.5rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:2rem;transition:.3s}
+.card:hover{box-shadow:0 10px 30px -14px rgba(20,20,30,.18);transform:translateY(-2px)}
+.card h3{font-family:var(--serif);font-weight:400;font-size:1.8rem;margin:.4rem 0}
+.card p{color:var(--ink-2);margin-bottom:1rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.tag{font-size:.72rem;padding:.25rem .65rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-family:ui-monospace,Menlo,monospace}
+footer{margin-top:6rem;border-top:1px solid var(--line);padding:1.5rem 0;font-size:.85rem;color:var(--ink-3)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#home" class="logo">Subinav<span> S</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav aria-label="Primary">
+      <ul class="links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="wrap">
+    <p class="label">Portfolio version 2</p>
+    <h1>Subinav S<em>.</em></h1>
+    <p class="lead">Data Science student building at the intersection of AI, FinTech and RegTech.</p>
+    <div class="badges">
+      <!-- REPLACE YOUR-PARTICIPANT-CODE with the code from your lab -->
+      <span class="badge">Participant code: <b id="participant-code">YOUR-PARTICIPANT-CODE</b></span>
+      <span class="badge">Portfolio version 2</span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn ghost" href="#about">About me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <p class="label">About</p>
+    <h2>Turning data into working products.</h2>
+    <div class="about">
+      <div>
+        <p>I'm a B.Sc. Data Science student at Sri Krishna Arts and Science College in Coimbatore. I enjoy building practical tools with Python, Java and SQL, and analysing data with Pandas, Power BI and machine learning.</p>
+        <p>My interests are AI, Big Data, FinTech and RegTech, especially products that make money management and regulatory compliance simpler.</p>
+      </div>
+      <ul class="facts">
+        <li><span>Education</span><span>B.Sc. Data Science</span></li>
+        <li><span>College</span><span>Sri Krishna Arts and Science College</span></li>
+        <li><span>Location</span><span>Coimbatore, Tamil Nadu, India</span></li>
+        <li><span>Interests</span><span>AI, Big Data, FinTech, RegTech</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <p class="label">Skills</p>
+    <h2>Toolkit</h2>
+    <div class="skills">
+      <div><h3>Programming</h3><ul><li>Python</li><li>Java</li><li>SQL / MySQL</li></ul></div>
+      <div><h3>Data &amp; Analytics</h3><ul><li>Pandas · NumPy</li><li>Matplotlib</li><li>Power BI</li></ul></div>
+      <div><h3>AI / ML &amp; Big Data</h3><ul><li>scikit-learn</li><li>PySpark · Hadoop</li><li>Spark MLlib</li></ul></div>
+      <div><h3>Backend &amp; Tools</h3><ul><li>Flask</li><li>Supabase · AWS S3</li><li>Figma · Flutter</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="wrap">
+    <p class="label">Projects</p>
+    <h2>Selected work</h2>
+    <div class="projects">
+      <article class="card">
+        <p class="label">Personal finance · PWA</p>
+        <h3>Ceiffer</h3>
+        <!-- Version 2 update: description revised -->
+        <p>A personal finance Progressive Web App that brings transactions, budgets, subscriptions and EMIs into one place, with AI-generated insights to help users understand and plan their spending.</p>
+        <div class="tags"><span class="tag">Supabase</span><span class="tag">PWA</span><span class="tag">AI insights</span></div>
+      </article>
+      <article class="card">
+        <p class="label">Health · Recommendation system</p>
+        <h3>FitClub</h3>
+        <p>A customized body fitness suggestion system that recommends fitness plans based on a user's body type and goals.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">SQL</span></div>
+      </article>
+      <article class="card">
+        <p class="label">Data · Cloud</p>
+        <h3>Cloud File Sharing System</h3>
+        <p>A Flask web application that uploads, stores and shares files using AWS S3 for storage and SQLite for metadata.</p>
+        <div class="tags"><span class="tag">Flask</span><span class="tag">SQLite</span><span class="tag">AWS S3</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Subinav S · Portfolio version 2</span>
+    <span>Coimbatore, India</span>
+  </div>
+</footer>
+
+<script>
+const btn=document.querySelector('.menu-btn'),links=document.getElementById('nav-links');
+btn.addEventListener('click',()=>{const o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+links.addEventListener('click',e=>{if(e.target.tagName==='A'){links.classList.remove('open');btn.setAttribute('aria-expanded',false)}});
+const navA=[...links.querySelectorAll('a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('main section[id]').forEach(s=>io.observe(s));
+</script>
+</body>
+</html>
