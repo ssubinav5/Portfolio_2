@@ -48,8 +48,12 @@ header{position:sticky;top:0;z-index:10;background:rgba(251,251,249,.9);backdrop
 .card:hover{box-shadow:0 10px 30px -14px rgba(20,20,30,.18);transform:translateY(-2px)}
 .card h3{font-family:var(--serif);font-weight:400;font-size:1.8rem;margin:.4rem 0}
 .card p{color:var(--ink-2);margin-bottom:1rem}
+.shot{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;margin:0 0 1.25rem}
 .tags{display:flex;flex-wrap:wrap;gap:.4rem}
 .tag{font-size:.72rem;padding:.25rem .65rem;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-family:ui-monospace,Menlo,monospace}
 footer{margin-top:6rem;border-top:1px solid var(--line);padding:1.5rem 0;font-size:.85rem;color:var(--ink-3)}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+/* Responsive media safety net */
+img{max-width:100%;height:auto}
+@media(max-width:600px){.links a{display:block;padding:8px 0}}
